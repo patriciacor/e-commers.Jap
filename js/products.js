@@ -1,5 +1,5 @@
 var product_listing = [];
-let cost = Precio;
+
 function products(array)
 {
     let list_content = "<br> <br>" ;
