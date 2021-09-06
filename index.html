@@ -18,37 +18,56 @@
  
 </head>
 
-<body>  
-  <div class="login">
+<body>   
+  <div class="fondo"></div>
+  <div class="login"> 
  <div class="form-login">
-<form action="products.html">
+<form id="form" class="form"> <!-- EL FORM action hace que la pagina html actual me redireccione a la otra si se cumplen los requerimientos.-->
   <img src="img/login1.png" alt="logojap">
-  <h4>
-    Login
-  </h4>
-  <label>UserName</label>
-<input  type="text" placeholder="Enter username" required > 
-<label>Password</label>
-<input type="password" placeholder="Enter your password" required >
-<button type="submit">Login</button>
-<a href="#">¿Forgot your password?</a>
-<a href="#">¿Don't have an account? sign in </a>
+<h1 class="h3 mb-3 font-weight-bold">Acceder</h1>
+<input type="text" id="username" class="form-control" placeholder="Ingrese su Nombre de Usuario:" required>
+<input type="password" id="password" class="form-control" placeholder="Ingrese su contraseña:" required>
+<button type="submit" class="btn btn-outline-success">Ingresar</button>
+<a href="#">¿Olvido su contraseña?</a>
+<a href="#">¿No está registrado ? Registrarse </a> 
+
+<!--enlaces reados para que el usuario pueda registrarse en caso de no tener cuenta-->
 </form>  
    </div>
    </div>
-  
- <style>
+
+
+   
+    
+ 
+ 
+    <style>
    body  {
-background-image: url('img/back2.jpg');
-background-repeat: no-repeat;
-background-size: cover;
+    margin: 0;
+    min-height: 100vh;
+        background-image: url("img/fondo.jpg");
+        background-repeat: no-repeat;
+        
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+      .fondo{
+        content: "";
+        width: 100%;
+        min-height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image:  linear-gradient(45deg,#0b748b,#ad55c1);
+        opacity: 0.5;
+        z-index: -1;
+        background-size: cover;
+      
     }
   
- 
-
-  </style>
-  
+ </style>
   <script src="js/init.js"></script>
-  
+<script src="js/login.js"></script>
 </body>
 </html>

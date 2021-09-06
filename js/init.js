@@ -39,13 +39,5 @@ var getJSONData = function(url){
         return result;
     });
   }
-  document.addEventListener("DOMContentLoaded", function(e){
-    getJSONData(PRODUCTS_URL).then(function (list) {
-      if (list.status === "ok") {
-          product_listing = list.data;
-          products(product_listing);
-      } 
-  });
-      
-  });
-   
+
+  
