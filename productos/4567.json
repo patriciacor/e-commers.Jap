@@ -1,0 +1,16 @@
+{
+    "name": "Peugeot 208",
+    "description": "El Peugeot 208 2020 representa algo más que sólo movilidad del punto A al B.\u003cbr\u003eEl pequeño hatchback francés pasó por un meticuloso proceso de diseño, donde hubo mucha influencia de 3008 y 508. Al frente encontraremos una parrilla con fuerte peso visual, así como faros con iluminación de LED en tres piezas, simulando las garras de un león. En la parte trasera hallaremos la banda negra que recorre toda la tapa de la cajuela y une las calaveras, que también muestran las garras de Peugeot en LED. ",
+    "cost": 15200,
+    "currency": "USD",
+    "soldCount": 17,
+    "category": "Autos",
+    "images": [
+        "img/prod4.jpg",
+        "img/peu1.jpg",
+        "img/peu2.jpg",
+        "img/peu3.jpg"
+    
+    ]
+
+}

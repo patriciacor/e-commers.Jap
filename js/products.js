@@ -14,7 +14,7 @@ function products(array)// funcion con parametro array ya que leera una cadena d
      <h3>` + product.name  + `</h3>   
         <h4>` + product.description +  `</h4>
         <h5>` + product.currency + " " + product.cost +  `</h5> 
-            
+        <div> <button class=btn id="info">Ver Más</button> </div>
                '<hr color = white>'    
       
         `
