@@ -2,6 +2,11 @@ var product_listing = []; // lista vacia
 var minimoCosto;
 var maximoCosto;
 
+function infoProducto(id) {
+    sessionStorage.setItem('informacion', id);
+    window.location = 'product-info.html';
+}
+
 function products(array)// funcion con parametro array ya que leera una cadena de caracteres
 {
     let list_content = "<br> <br>" ; //creo una variable local en forma de bloque que contendra la informacion de mi listado
@@ -14,8 +19,8 @@ function products(array)// funcion con parametro array ya que leera una cadena d
      <h3>` + product.name  + `</h3>   
         <h4>` + product.description +  `</h4>
         <h5>` + product.currency + " " + product.cost +  `</h5> 
-        <div> <button class=btn id="info">Ver Más</button> </div>
-               '<hr color = white>'    
+    <div>` + '<button onclick="infoProducto('+ product.id +')">Información</button>' + `</div>
+        '<hr color = white>'    
       
         `
         //le di estilo al salto de lina y encabezados a mi listado para que se vea de buen tamaño y contraste con el fondo 

@@ -6,9 +6,9 @@ const PRODUCT_INFO_URL = "https://japdevdep.github.io/ecommerce-api/product/5678
 const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/product/5678-comments.json";
 const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
 const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
-const fiat ="https://patriciacor.github.io/api/2345.json";
-const suzuki="https://patriciacor.github.io/api/3456.json";
-
+const FIAT ="https://patriciacor.github.io/e-commers.Jap/productos/2345.json";
+const SUZUKI="https://patriciacor.github.io/e-commers.Jap/productos/3456.json";
+const PEUGEOT="https://patriciacor.github.io/e-commers.Jap/productos/4567.json";
 var showSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "block";
 }
