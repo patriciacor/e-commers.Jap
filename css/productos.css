@@ -32,20 +32,13 @@ img{
      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
    font-size: large;
    text-align: center;}
-h3{
+h5{
  text-align: left;
  color:rgb(8, 8, 78);
  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  font-size: xx-large;
 }  
-h4{
-  color: antiquewhite;
 
-}
-h5{
-  color: antiquewhite;
-  float: right;
-}
 
 input{
 

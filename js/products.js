@@ -2,10 +2,11 @@ var product_listing = []; // lista vacia
 var minimoCosto;
 var maximoCosto;
 
-function infoProducto(id) {
-    sessionStorage.setItem('informacion', id);
-    window.location = 'product-info.html';
+function infoAuto(id){
+    localStorage.setItem('auto',id);
+    window.location='product-info.html'
 }
+
 
 function products(array)// funcion con parametro array ya que leera una cadena de caracteres
 {
@@ -16,11 +17,11 @@ function products(array)// funcion con parametro array ya que leera una cadena d
        if(((minimoCosto == undefined)||(minimoCosto != " " && parseInt(product.cost)>= minimoCosto)) && ((maximoCosto == undefined)||(maximoCosto != " " && parseInt(product.cost)<= maximoCosto)))  
        {            list_content += 
         `<img src="`+ product.imgSrc + `" alt="`+ product.description + `" class="img-thumbnail">
-     <h3>` + product.name  + `</h3>   
-        <h4>` + product.description +  `</h4>
+     <h5>` + product.name  + `</h5>   
+        <h5>` + product.description +  `</h5>
         <h5>` + product.currency + " " + product.cost +  `</h5> 
-    <div>` + '<button onclick="infoProducto('+ product.id +')">Información</button>' + `</div>
-        '<hr color = white>'    
+      `+ '<button onclick="infoAuto('+ product.id +')">Ver Más</button>'+`
+               '<hr color = white>'    
       
         `
         //le di estilo al salto de lina y encabezados a mi listado para que se vea de buen tamaño y contraste con el fondo 
@@ -30,6 +31,7 @@ function products(array)// funcion con parametro array ya que leera una cadena d
     //para que se visualice en ella
 }
 }
+
 document.addEventListener("DOMContentLoaded", function (e) {
     getJSONData(PRODUCTS_URL).then(function (list) {
         if (list.status === "ok") {
@@ -39,6 +41,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
     });
         
 }); 
+
+
 
 document.getElementById("filtro").addEventListener("click", function()
 {
@@ -99,4 +103,3 @@ products(product_listing)});
 document.getElementById("rel").addEventListener("click",function(){
     product_listing= product_listing.sort((a,b)=> (b.soldCount)-(a.soldCount))
     products(product_listing)});
-
