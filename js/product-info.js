@@ -17,12 +17,31 @@ function autos(array) {
           <h3>` + '<b>'+ auto.name +'<b>'+ `</h3>  '<br>' 
          <h3>` + auto.description +  `</h3>
          <h3>` + auto.cost + " " + auto.currency +  `</h3> 
-          <h3>`  +" "+ "Vendidos:" + auto.soldCount+ `</h3>
-          <div  >`+  '<img src="img/' + auto.id +'/1.jpg" class="img-fluid" width="1500" heigth="900">' +
-          '<img src="img/' + auto.id + '/2.jpg" class="img-fluid" width="1500" heigth="900">' +
-          '<img src="img/' + auto.id + '/3.jpg" class="img-fluid" width="1500" heigth="900">'+
-          '<img src="img/' + auto.id + '/4.jpg" class="img-fluid" width="1500" heigth="900">' + `</div>
-               
+          <h3>`  +" "+ "Vendidos:" + auto.soldCount+ `</h3>'
+        <div id="carouselControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+    <img class="d-block " src="img/`+ auto.id + `/1.jpg" width="1500" heigth="1000" alt="">
+  </div>
+  <div class="carousel-item">
+   <img class="d-block " src="img/`+ auto.id + `/2.jpg"  width="1500" heigth="1000 alt="">
+  </div>
+  <div class="carousel-item">
+   <img class="d-block " src="img/` +auto.id + `/3.jpg" width="1500" heigth="1000 alt="">
+  </div>
+  <div class="carousel-item">
+   <img class="d-block " src="img/`+auto.id + `/4.jpg" width="1500" heigth="1000 alt="">
+  </div>
+</div>
+<a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Anterior</span>
+</a>
+<a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="sr-only">Siguiente</span>
+</a>
+</div>
         `
     }
    
@@ -110,6 +129,7 @@ document.getElementById('enviar').addEventListener('click', function () {
     let calificacion = document.getElementById("radio").value;
     let ranckingID = localStorage.getItem("Calificacion");
 
+    
     comentario.contenido = texto;
     comentario.calificacion = calificacion;
 comentario.ranckingID = ranckingID;
