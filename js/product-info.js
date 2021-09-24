@@ -13,25 +13,27 @@ function autos(array) {
         
           {
                 lista_descripcion+= 
-        ` 
-          <h3>` + '<b>'+ auto.name +'<b>'+ `</h3>  '<br>' 
-         <h3>` + auto.description +  `</h3>
-         <h3>` + auto.cost + " " + auto.currency +  `</h3> 
-          <h3>`  +" "+ "Vendidos:" + auto.soldCount+ `</h3>'
-        <div id="carouselControls" class="carousel slide" data-ride="carousel">
+        ` <div style="background-color: teal; ">
+        <h1>` + '<b>'+ auto.name +'<b>'+ `</h1>  '<br>' 
+        <h3>` + auto.description +  `</h3>
+    <h3 style="float: right;">` + auto.cost + " " + auto.currency +  `</h3> '<br>'
+ '<br>'<h3 >`  +" "+ "Vendidos:" + auto.soldCount+ `</h3> '<br>'
+</div>
+</div>
+        <div id="carouselControls" class="carousel slide" data-ride="carousel" style="float:left;">
         <div class="carousel-inner">
         <div class="carousel-item active">
     <img class="d-block " src="img/`+ auto.id + `/1.jpg" width="1500" heigth="1000" alt="">
   </div>
   <div class="carousel-item">
-   <img class="d-block " src="img/`+ auto.id + `/2.jpg"  width="1500" heigth="1000 alt="">
+   <img class="d-block " src="img/`+ auto.id + `/2.jpg"  width="1500" heigth="1000"alt="">
   </div>
   <div class="carousel-item">
-   <img class="d-block " src="img/` +auto.id + `/3.jpg" width="1500" heigth="1000 alt="">
+    <img class="d-block " src="img/` +auto.id + `/3.jpg" width="1500" heigth="1000" alt="">
   </div>
   <div class="carousel-item">
-   <img class="d-block " src="img/`+auto.id + `/4.jpg" width="1500" heigth="1000 alt="">
-  </div>
+    <img class="d-block " src="img/`+auto.id + `/4.jpg" width="1500"  heigth="1000"alt="">
+    </div>
 </div>
 <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -42,9 +44,12 @@ function autos(array) {
   <span class="sr-only">Siguiente</span>
 </a>
 </div>
+
         `
     }
-   
+      
+    
+
  document.getElementById("listing").innerHTML = lista_descripcion;
  
 }
@@ -69,12 +74,12 @@ let lista_comentarios = "<div>";
     for (let i = 0; i < array.length; i++)  {  
         let comentario = array[i];{
             lista_comentarios +=
-` 
+` <div  class="com" style="background-color: teal; text-align:center;">
         <p>` + 'Calificación:'+ comentario.score + `</p>
         <p>` + 'Comentario:' + comentario.description + `</p>
         <p>`+  comentario.user + `</p> 
         <p>`+comentario.dateTime + `</p>
-     '<hr >'
+     </div>
     `  }
     document.getElementById("comentario").innerHTML= lista_comentarios;
   }
@@ -129,7 +134,6 @@ document.getElementById('enviar').addEventListener('click', function () {
     let calificacion = document.getElementById("radio").value;
     let ranckingID = localStorage.getItem("Calificacion");
 
-    
     comentario.contenido = texto;
     comentario.calificacion = calificacion;
 comentario.ranckingID = ranckingID;
@@ -143,3 +147,26 @@ comentario.ranckingID = ranckingID;
 
 
 });
+
+function ProductosRelacionados(array){
+    let productosRel= "<div>";
+        for (let i = 0; i < array.length; i++)  {  
+            let Relacionados = array[i];{
+                productosRel +=
+    ` <h2>` + Relacionados.name  + `</h2>   
+    <h2>` + Relacionados.description +  `</h2>
+    <h2>` + Relacionados.currency + " " + Relacionados.cost +  `</h2>
+    <img class="d-block " src="img/`+ Relacionados.relatedProducts + `/1.jpg"  width="200" heigth="200"alt="">
+    <img class="d-block " src="img/`+ Relacionados.relatedProducts  + `/2.jpg"  width="200" heigth="200"alt="">
+    
+        `  }
+        document.getElementById("Productosrel").innerHTML= productosRel;
+      }
+    }
+      document.addEventListener("DOMContentLoaded", function(evento){
+          getJSONData(PRODUCTS_URL).then(function(resultado){
+              (resultado.status === "ok");
+             productosRel = resultado.data;
+              ProductosRelacionados(productosRel);
+          })
+      })

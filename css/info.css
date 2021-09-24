@@ -4,10 +4,10 @@ body{
         height: 100vh;
         opacity: 0.8;
         z-index: 0;
-        background: linear-gradient(45deg,#3a96bb,#8aa3f7);
+        background-color: whitesmoke;
         background-size: cover;
 }
-.star-rating {
+.star-rating { text-align: center;
   direction: rtl;
   
 }
@@ -17,7 +17,7 @@ body{
 }
 
 .star-rating label {
-  color: rgb(30, 55, 197);
+  color:teal;
   font-size: 20px;
   padding: 0;
   cursor: pointer;
@@ -29,14 +29,51 @@ body{
   color: #ffbf00
 }
 
+
+  h4{ text-align: justify; 
+    text-align: center;
+   
+  }
+
+  
+.botones{
+  text-align: center;
+}
+
 p{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-style: normal;
   font-size: large;
+  font-family: cursive;
+  color:rgb(10, 9, 9);
 }
-hr{
-  color: blue;
-}
+h
 .botones{
   font-size: large;
+}
+
+
+.com{
+margin-right:200px;
+margin-left:200px;
+}
+h1{
+  
+  text-align: center;
+}
+h3 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }

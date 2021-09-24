@@ -75,7 +75,7 @@ const cerrar= document.getElementById("cerrar");
 let username= JSON.parse(localStorage.getItem('usuarioName'));
 if (username != null)
 {
-    user.innerHTML= '<a href="#" id="cerrar" class="col-2 float-right">'+ username[0].usuario+'</a>';
+    user.innerHTML= '<a href="index.html" id="cerrar" class="" style="color:white;">'+ username[0].usuario+'</a>';
 
 }
 else{
