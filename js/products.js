@@ -10,7 +10,7 @@ function infoAuto(id){
 
 function products(array)// funcion con parametro array ya que leera una cadena de caracteres
 {
-    let list_content = "<br> <br>" ; //creo una variable local en forma de bloque que contendra la informacion de mi listado
+    let list_content = "<br>" ; //creo una variable local en forma de bloque que contendra la informacion de mi listado
 
     for (let i = 0; i < array.length; i++) { //el for recorre mi lista de array y cada vez que el for recorre la longitud de array con el indice ,le suma 1,
         let product = array[i];
@@ -21,17 +21,17 @@ function products(array)// funcion con parametro array ya que leera una cadena d
         <h5>` + product.description +  `</h5>
         <h5>` + product.currency + " " + product.cost +  `</h5> 
       `+ '<button onclick="infoAuto('+ product.id +')">Ver Más</button>'+`
+      
                '<hr color = white>'    
       
         `
         //le di estilo al salto de lina y encabezados a mi listado para que se vea de buen tamaño y contraste con el fondo 
     }
-    document.getElementById("listing").innerHTML = list_content; 
-    // con getElementById llamo al id que coloque dentro de un div en mi pagina html y le digo que su valor , es igual a la lista de contenido 
+    document.getElementById("listing").innerHTML = list_content;
+        // con getElementById llamo al id que coloque dentro de un div en mi pagina html y le digo que su valor , es igual a la lista de contenido 
     //para que se visualice en ella
 }
 }
-
 document.addEventListener("DOMContentLoaded", function (e) {
     getJSONData(PRODUCTS_URL).then(function (list) {
         if (list.status === "ok") {

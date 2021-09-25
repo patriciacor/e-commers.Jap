@@ -13,7 +13,8 @@ function autos(array) {
         
           {
                 lista_descripcion+= 
-        ` <div style="background-color: teal; ">
+        ` <div>
+        
         <h1>` + '<b>'+ auto.name +'<b>'+ `</h1>  '<br>' 
         <h3>` + auto.description +  `</h3>
     <h3 style="float: right;">` + auto.cost + " " + auto.currency +  `</h3> '<br>'
@@ -54,6 +55,7 @@ function autos(array) {
  
 }
 
+
 };
 
 
@@ -74,7 +76,7 @@ let lista_comentarios = "<div>";
     for (let i = 0; i < array.length; i++)  {  
         let comentario = array[i];{
             lista_comentarios +=
-` <div  class="com" style="background-color: teal; text-align:center;">
+` <div  class="com" style=" text-align:center;">
         <p>` + 'Calificación:'+ comentario.score + `</p>
         <p>` + 'Comentario:' + comentario.description + `</p>
         <p>`+  comentario.user + `</p> 
@@ -147,26 +149,36 @@ comentario.ranckingID = ranckingID;
 
 
 });
+var  list_content= [];
+function infoAuto(id){
+    localStorage.setItem('auto',id);
+    window.location='product-info.html'
+}
 
-function ProductosRelacionados(array){
-    let productosRel= "<div>";
-        for (let i = 0; i < array.length; i++)  {  
-            let Relacionados = array[i];{
-                productosRel +=
-    ` <h2>` + Relacionados.name  + `</h2>   
-    <h2>` + Relacionados.description +  `</h2>
-    <h2>` + Relacionados.currency + " " + Relacionados.cost +  `</h2>
-    <img class="d-block " src="img/`+ Relacionados.relatedProducts + `/1.jpg"  width="200" heigth="200"alt="">
-    <img class="d-block " src="img/`+ Relacionados.relatedProducts  + `/2.jpg"  width="200" heigth="200"alt="">
-    
-        `  }
-        document.getElementById("Productosrel").innerHTML= productosRel;
-      }
-    }
-      document.addEventListener("DOMContentLoaded", function(evento){
-          getJSONData(PRODUCTS_URL).then(function(resultado){
-              (resultado.status === "ok");
-             productosRel = resultado.data;
-              ProductosRelacionados(productosRel);
-          })
-      })
+function products(array)
+{
+    let list_content = "<br> <br>" ; 
+
+    for (let i = 0; i < array.length; i++) { 
+        let product = array[i];
+       {            list_content += 
+        `<div style="text-align: center">
+        <img src="`+ product.imgSrc + `" alt="`+ product.description + `" class="rounded mx-auto d-block" width="200" heigth="200">
+     <h5>` + product.name  + `</h5>   
+      <p>` + '<button onclick="infoAuto('+ product.id +')">Ver Producto</button> '+ `</p>
+      
+        `
+            }
+    document.getElementById("ProductosRelacionados").innerHTML = list_content;
+        
+}
+}
+document.addEventListener("DOMContentLoaded", function (e) {
+    getJSONData(PRODUCTS_URL).then(function (list) {
+        if (list.status === "ok") {
+            product_listing = list.data;
+            products(product_listing);
+        } 
+    });
+        
+}); 
