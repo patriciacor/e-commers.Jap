@@ -2,14 +2,18 @@
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 var lista_autos=[];
+var related= [];
+function infoAuto(id){
+    localStorage.setItem('auto',id);
+    window.location='product-info.html'
+}
+    
 
-
-
-function autos(array) {
+    function autos(array) {
     let lista_descripcion = "<br> <br> ";
     
-     for (let i = 0; i < array.length; i++)  {  
-          let  auto= array[i]; 
+     for (let i = 0; i < array.length; i++) {
+     let  auto= array[i]; 
         
           {
                 lista_descripcion+= 
@@ -48,25 +52,19 @@ function autos(array) {
 
         `
     }
-      
-    
-
- document.getElementById("listing").innerHTML = lista_descripcion;
- 
+      document.getElementById("listing").innerHTML = lista_descripcion;
+     }
 }
-
-
-};
-
 
 document.addEventListener("DOMContentLoaded", function(e){
 getJSONData(PRODUCT_INF_URL).then(function(result){
     if (result.status === "ok");
     { lista_autos = result.data;
         let auto = lista_autos.filter(e => e.id === parseInt(localStorage.getItem('auto')));
-        autos(auto);
+          autos(auto);
        
-    }
+}
+
 })
 });
 
@@ -148,37 +146,49 @@ comentario.ranckingID = ranckingID;
     };
 
 
-});
-var  list_content= [];
+})
+
 function infoAuto(id){
     localStorage.setItem('auto',id);
     window.location='product-info.html'
 }
 
-function products(array)
-{
-    let list_content = "<br> <br>" ; 
 
-    for (let i = 0; i < array.length; i++) { 
-        let product = array[i];
-       {            list_content += 
-        `<div style="text-align: center">
-        <img src="`+ product.imgSrc + `" alt="`+ product.description + `" class="rounded mx-auto d-block" width="200" heigth="200">
-     <h5>` + product.name  + `</h5>   
-      <p>` + '<button onclick="infoAuto('+ product.id +')">Ver Producto</button> '+ `</p>
+    for (let relatedProducts in lista_autos){
+        lista_autos[relatedProducts];
+
+    }
+    function Related(array)
+{
+    let lista_autos= "<br>" ; 
+
+    for (let i = 0; i < array.length; i++) {
+        let relacionado= array[i];
+
+       {            lista_autos += 
+
+     ` <div class="text-aling:center">
+     <img src="`+ relacionado.imgSrc + `" alt="`+ relacionado.description + `" class="img-thumbnail" width="200px" heigth="200px">
+      <h3>` + relacionado.name  + `</h3>   
+        <p>` + relacionado.currency + " " + relacionado.cost +  `</p> 
+      `+ '<button onclick="infoAuto('+ relacionado.id +')">Ver Más</button>'+`
       
+               '<hr color = white>'    
+      </div>
         `
-            }
-    document.getElementById("ProductosRelacionados").innerHTML = list_content;
-        
+    }
+    document.getElementById("ProductosRelacionados").innerHTML = lista_autos;
+    
 }
 }
 document.addEventListener("DOMContentLoaded", function (e) {
     getJSONData(PRODUCTS_URL).then(function (list) {
         if (list.status === "ok") {
-            product_listing = list.data;
-            products(product_listing);
+            lista_autos = list.data;
+            for (let relacionado in lista_autos)
+            Related(lista_autos);
         } 
     });
         
 }); 
+
