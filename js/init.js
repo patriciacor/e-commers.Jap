@@ -7,6 +7,7 @@ const PRODUCT_INFO_COMMENTS_URL = "https://patriciacor.github.io/ecommers-api/co
 const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
 const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
 const PRODUCT_INF_URL="https://patriciacor.github.io/ecommers-api/autos.json";
+const CARRITO_URL = "https://patriciacor.github.io/ecommers-api/carrito.json";
 var showSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "block";
 }
