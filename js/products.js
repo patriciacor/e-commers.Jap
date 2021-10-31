@@ -16,17 +16,23 @@ function products(array)// funcion con parametro array ya que leera una cadena d
         let product = array[i];
        if(((minimoCosto == undefined)||(minimoCosto != " " && parseInt(product.cost)>= minimoCosto)) && ((maximoCosto == undefined)||(maximoCosto != " " && parseInt(product.cost)<= maximoCosto)))  
        {            list_content += 
-        `<img src="`+ product.imgSrc + `" alt="`+ product.description + `" class="img-thumbnail">
-     <h5>` + product.name  + `</h5>   
-        <h5>` + product.description +  `</h5>
-        <h5>` + product.currency + " " + product.cost +  `</h5> 
-      `+ '<button onclick="infoAuto('+ product.id +')">Ver Más</button>'+`
-      
-               '<hr color = white>'    
-      
-        `
-        //le di estilo al salto de lina y encabezados a mi listado para que se vea de buen tamaño y contraste con el fondo 
-    }
+        ` 
+        <div class="card col-mb-8 col-lg-3 col-12 m-5 bg-light  border border-secundary rounded-lg">
+            <img src=${product.imgSrc} class="card-img-top mx-auto" width="300px" height="200px"alt="" >
+            
+            <div class="card-body" >
+              <h5 class="card-title text-dark">${product.name}</h5>
+              <p class="card-text text-dark">${product.description}.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-muted bg-light">${product.cost}${product.currency}</li>
+              </ul>
+            <div class="card-body text-dark">
+            <button onclick="infoAuto(`+ product.id +`)">Ver más</button>  
+            </div>
+          </div>
+         `
+        }
     document.getElementById("listing").innerHTML = list_content;
         // con getElementById llamo al id que coloque dentro de un div en mi pagina html y le digo que su valor , es igual a la lista de contenido 
     //para que se visualice en ella

@@ -40,40 +40,72 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <div class="btn-group" style="align-content: center; " >
-        <button id="user"type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        usuario
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="cart.html">Mi Carrito</a>
-          <a class="dropdown-item" href="my-profile.html">Mi Perfil </a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="index.html">Cerrar Sesión</a>
-        </div>
-      </div>
-</div>
-    </div>
-  </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 6 (Fecha de entrega: 31/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
-  </div>
-  <footer class="text-muted bg-light">
-    <div class="container">
-      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-    </div>
-  </footer>
-  <div class="alert fade alert-success" role="alert" id="alertResult">
-    <span id="resultSpan"></span>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
+      <a class="py-2 d-none d-md-inline-block" href="#user" id="user">Usuario</a>
+      <div class="btn-group" style="align-content: center; ">
+        
+          <p class="d-none d-xs-block d-sm-block d-xl-none d-lg-none">
+            <button class="btn btn-primary btn-sm form-control" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+               Inicio
+               </button>
+             </p>
+             <div class="collapse" id="collapseExample">
+       <br>
+                 <a class=" d-none d-sm-block " href="index.html">Inicio</a>
+         <a class="  d-none d-sm-block " href="categories.html">Categorías</a>
+         <a class="  d-none d-sm-block " href="products.html">Productos</a>
+         <a class="  d-none d-sm-block" href="sell.html">Vender</a>
+         <a class="  d-none d-sm-block " href="my-profile.html">Mi Perfil</a>
+         <a class="  d-none d-sm-block" href="index.html">Cerrar Sesión</a>
+   </nav>
+          
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form" name ="formulario"id="formulario">
+          <div class="form-group">
+             <label for="InputName">
+               Nombre
+             </label>
+             <input type="name" class="form-control" name="nombre1"id="InputName"/>
+           </div>
+           <div class="form-group">
+             <label for="InputApellido">
+               Apellidos
+             </label>
+             <input type="Apellido" name="apellido1" class="form-control" id="InputApellido"/>
+          <label for="Age">
+            Edad
+          </label>
+          <input type="age" name="edad1" class="form-control" id="Age"/>
+           </div>
+ 
+            <label for="InputEmail">
+              Dirección de correo electrónico
+            </label>
+            <input type="email" name="email1" class="form-control" id="InputEmail" />
+          
+          <div class="form-group">
+             <label for="InputPassword">
+              Contraseña
+            </label>
+      
+            <input type="password" name="cont1" class="form-control" id="InputPassword" />
+            </div>
+            <div class="form-group">
+
+         <label for="InputContacto"> Telefono de Contacto <input type="numero" class="form-control" id="InputContacto"/>
+         </label>
+          </div>
+         <button type="submit" id="boton" onclick="recuperar()"class="btn btn-primary">
+            Guardar
+          </button>  
+        </form>
+
+
+
+
+        
+ </div></div> </div> </div>
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>

@@ -12,19 +12,55 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <link href="css/productos.css" rel="stylesheet">
+<link href="css/productos.css" rel="stylesheet">
+
   </head>
   <body>
-   
- 
+    <style>
+      body{
+          margin: 0;
+          min-height: 100vh;
+          background-image: url("img/back2.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+  
+  
+  
+        }
+        body::before{
+          content: "";
+          width: 400%;
+          min-height: 400vh;
+          height: 400vh;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: linear-gradient(45deg,#0f0f0f,#fdfbfd);
+          opacity: 0.7;
+          z-index: -1;
+          background-size: cover;
+        }
+      </style>
+    <nav class="site-header sticky-top py-1 bg-dark">
       <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
-        <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-        <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
+    <nav class="navbar navbar-dark bg-dark">
+       <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+    </nav>
+    
+    <nav class="navbar navbar-dark d-md-inline-block bg-dark">
+      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
+    </nav>
+    <nav class="navbar navbar-dark bg-dark">
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      
-      <div class="btn-group" style="align-content: center; " >
-        <button id="user"type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    </nav>
+    <nav class="navbar ">
+      <a class="py-2 d-none d-md-inline-block navbar-dark" href="products.html">Productos</a>
+    </nav>
+    <nav class="navbar navbar-dark bg-dark"> 
+         <div class="btn-group" style="align-content: center; " >
+       <button id="user"type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         usuario
         </button>
         <div class="dropdown-menu">
@@ -42,36 +78,10 @@
             viewBox="0 0 172 172"
             style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#1abc9c"><path d="M10.32,0c-5.68406,0 -10.32,4.63594 -10.32,10.32v151.36c0,5.68406 4.63594,10.32 10.32,10.32h116.96c5.68406,0 10.32,-4.63594 10.32,-10.32v-30.4225c-1.86781,1.6125 -4.17906,2.58 -6.665,2.58c-2.75469,0 -5.36156,-1.16906 -7.31,-3.1175c-4.03125,-4.03125 -4.03125,-10.48125 0,-14.5125l13.975,-14.0825v-5.805h-79.12c-5.68406,0 -10.32,-4.63594 -10.32,-10.32c0,-5.68406 4.63594,-10.32 10.32,-10.32h79.12v-5.805l-13.975,-14.0825c-1.94844,-1.94844 -3.01,-4.44781 -3.01,-7.2025c0,-2.75469 1.06156,-5.36156 3.01,-7.31c1.94844,-1.94844 4.55531,-3.01 7.31,-3.01c2.48594,0 4.79719,0.86 6.665,2.4725v-30.4225c0,-5.68406 -4.63594,-10.32 -10.32,-10.32zM130.935,45.15c-0.87344,0 -1.80062,0.29563 -2.4725,0.9675c-1.34375,1.34375 -1.34375,3.49375 0,4.8375l31.605,31.605h-101.5875c-1.89469,0 -3.44,1.54531 -3.44,3.44c0,1.89469 1.54531,3.44 3.44,3.44h101.5875l-31.605,31.605c-1.34375,1.34375 -1.34375,3.49375 0,4.8375c0.67188,0.67188 1.58563,1.075 2.4725,1.075c0.88688,0 1.69313,-0.40312 2.365,-1.075l39.8825,-39.8825l-39.8825,-39.8825c-0.67187,-0.67187 -1.49156,-0.9675 -2.365,-0.9675z"></path></g></g></svg></a>
         </div> </div> </div>
+      </nav>
+    </div>
+  </nav>
 
-
-
-
-
-
-    <style>
-      body{
-        margin: 0;
-        min-height: 100vh;
-        background-image: url("img/back2.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-      }
-      body::before{
-        content: "";
-        width: 100%;
-        min-height: 100vh;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: linear-gradient(45deg,#52c4df,#ad55c1);
-        opacity: 0.5;
-        z-index: -1;
-        background-size: cover;
-      }
-    </style>
 
      
       
@@ -84,7 +94,7 @@
 </div>
 </div>
 <br> <br>
-<div class="col">
+<div class="container-fluid">
 
   <input type="number" placeholder="Menor Costo" id="costo-min">
   <input type="number" placeholder="Mayor Costo" id="costo-max">
@@ -97,15 +107,17 @@
   <button type="button" id="desc" >Precio Z-A</button>
   <button type="button" id="rel" >Más Vendidos</button>
 </div>
-
+</div>
  <div class="contenedor" id="contenedor">
 
-<div id="listing">
+<div  class="">
+  <div class="row" id="listing">
+
+  </div>
 
 
-</div>
-</div>  
-      
+
+
     <div class="fondo"></div>   
     <div id="spinner-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
     <script src="js/jquery-3.4.1.min.js"></script>

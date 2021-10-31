@@ -1,0 +1,40 @@
+
+  
+.img-fluid{
+    height: 200px;
+    width: 250px;
+}
+.cantP{
+    font-size: x-small;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+hr{
+color: rgb(141, 135, 135);
+height: 0px;
+border:1px;}
+
+.row{ margin: 150;
+    margin-left: 15px;
+    display:flex;
+text-align: justify;
+
+border: rgb(3, 3, 48);
+}
+.card body {
+color: gray;
+display: flex;
+border: blue;}
+
+#carrito{
+    margin: 15px;
+    padding: 2px;
+}
+#carrito:hover{
+    box-shadow: 08px 16px black;
+    
+    
+}
+p{font-size:large;
+     font-weight: bold;
+text-align: justify;
+    }

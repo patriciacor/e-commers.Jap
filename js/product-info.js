@@ -41,7 +41,8 @@ function infoAuto(id){
     </div>
 </div>
 <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
-  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="carousel-co
+  -ntrol-prev-icon" aria-hidden="true"></span>
   <span class="sr-only">Anterior</span>
 </a>
 <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
@@ -185,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     getJSONData(PRODUCTS_URL).then(function (list) {
         if (list.status === "ok") {
             lista_autos = list.data;
-            for (let relacionado in lista_autos)
+            for (let related in lista_autos)
             Related(lista_autos);
         } 
     });

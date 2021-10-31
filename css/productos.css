@@ -1,64 +1,15 @@
-body{
-  margin: 0;
-  min-height: 100vh;
-  background-image: url("img/back2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+
+a{
+  color: black;
 }
-body::before{
-  content: "";
-  width: 100%;
-  min-height: 100vh;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(45deg,#52c4df,#ad55c1);
-  opacity: 0.5;
-  z-index: -1;
-  background-size: cover;
+.card{
+  display: inline-block;
+  padding-bottom: 4px;
 }
-
-
-
-  .fondo{
-    content: "";
-    width: 150%;
- height: 150vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(45deg,#cc1772,#03cbf8);
-    opacity: 0.5;
-    z-index: -1;
-    background-size: cover;
-  }
-
-
-img{ 
-    
-     width: 200px;
-     height: 200px;
-     float :left
-   }
-   .style{
-     color:blanchedalmond;
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-   font-size: large;
-   text-align: center;}
-h5{
- text-align: left;
- color:rgb(8, 8, 78);
- font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- font-size: xx-large;
-}  
-
-
 input{
 
     display:block;
+   
     width: 180px;
     height: 20px;
     
@@ -72,12 +23,3 @@ button{
   
 }
 
-.py-2{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
-}
-
-.btn{
-float: right; 
-
-}
